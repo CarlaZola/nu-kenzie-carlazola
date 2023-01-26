@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 import { ThemeProvider } from 'styled-components';
-import {themeLigth, themeDark } from "../../styles/theme.js";
+import {themeLigth, themeDark } from "../../styles/theme";
 import StyledDashboard from "./dashboard";
 
 function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue}){

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
-import illustration from "../../assets/illustration.svg"
-import MainHome from "./home"
-import nukenzieDarkMode from "../../assets/nukenzieDarkMode.svg"
+import { Link } from "react-router-dom";
+import illustration from "../../assets/illustration.svg";
+import MainHome from "./home";
+import nukenzieDarkMode  from "../../assets/nukenzieDarkMode.svg";
 
 function Home(){
     return(
