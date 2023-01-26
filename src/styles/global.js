@@ -30,11 +30,13 @@ const Global = createGlobalStyle`
     }
 
     body{
-        height: 100vh;
+        min-height: 100vh;
+        min-width: 100vw;
     }
 
     a{
         text-decoration: none;
+        color: var( --colorGrey4)
     }
 
     li{
