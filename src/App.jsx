@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import RoutesMain from './routes'
 import Global from './styles/global'
 import { ThemeProvider } from 'styled-components';
-import {themeLigth, themeDark } from "./styles/theme";
+import { themeLigth, themeDark } from "./styles/theme";
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
   }
 
   useEffect(() => {
-      localStorage.setItem("@favoriteTheme", JSON.stringify(theme ? themeLigth : themeDark))
+      localStorage.setItem("@favoriteTheme", JSON.stringify(theme))
   }, [theme])
 
 
