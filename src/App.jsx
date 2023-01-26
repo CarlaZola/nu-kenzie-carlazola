@@ -6,7 +6,14 @@ import { themeLigth, themeDark } from "./styles/theme";
 
 function App() {
 
-  const [theme, setTheme] = useState(false)
+  const modeTheme = JSON.parse(localStorage.getItem("@favoriteMode"))
+
+  const [theme, setTheme] = useState(modeTheme ? modeTheme : "ligth" )
+
+  useEffect(() => {
+    localStorage.setItem("@favoriteMode", JSON.stringify(theme))
+  }, [theme])
+
 
   const typeOfEntries = [
     {
@@ -37,7 +44,7 @@ function App() {
   return (
       <>       
           <Global/>
-          <ThemeProvider theme={theme ? themeDark : themeLigth}>
+          <ThemeProvider theme={theme == "ligth" ? themeLigth : themeDark}>
             <RoutesMain 
             newTransaction={newTransaction} 
             listTransaction={listTransaction}  

@@ -7,16 +7,18 @@ import  {FaMoon , FaSun}  from "react-icons/fa";
 import StyledDashboard from "./dashboard";
 
 function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue, theme, setTheme}){
-
+    
     return(
           <StyledDashboard>
             <Header/>
                 {
-                    theme ? (
-                        <FaSun onClick={() => setTheme(false)}/>
+                    
+                    theme == "ligth" ? (
+                       <FaMoon onClick={() => setTheme("dark")}/> 
                     ):(
-                        <FaMoon onClick={() => setTheme(true)}/>
+                       <FaSun onClick={() => setTheme("ligth")}/> 
                     )
+                    
                 }
             <Form 
             newTransaction={newTransaction}/>

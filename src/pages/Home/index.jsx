@@ -12,7 +12,9 @@ function Home(){
                 </h1>
                 <h2>Centralize o controle das suas finanças</h2>
                 <p>de forma rápida e segura</p>
-                <Link to={"/dashboard"}>Iniciar</Link>
+                <div>
+                    <Link to={"/dashboard"} className="button_navigate">Iniciar</Link>
+                </div>
             </section>
             <section className="img">
                 <img src={illustration} alt="" />
