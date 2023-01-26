@@ -3,12 +3,21 @@ import Home from "../pages/Home"
 import Dashboard from "../pages/Dashboard"
 
 
-function RoutesMain({newTransaction}){
+function RoutesMain({newTransaction, listTransaction, typeOfEntries, setFilteredTransactions, totalValue}){
 
     return(
         <Routes>
             <Route path="/" element={ <Home /> }/>
-            <Route path="/nukenzie-app" element={ <Dashboard newTransaction={newTransaction}/> }/>
+            <Route 
+            path="/dashboard" 
+            element={<Dashboard 
+            newTransaction={newTransaction} 
+            listTransaction={listTransaction} 
+            typeOfEntries={typeOfEntries}
+            setFilteredTransactions={setFilteredTransactions}
+            totalValue={totalValue}
+            />          
+            }/>
         </Routes>
     )
 }

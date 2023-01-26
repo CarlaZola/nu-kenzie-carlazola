@@ -5,13 +5,15 @@ import { yupResolver } from "@hookform/resolvers/yup"
 
 function Form({newTransaction}){
 
-    const { register, handleSubmit, formState: { errors }} = useForm({
+    const { register, handleSubmit, formState: { errors }, reset} = useForm({
+        mode: "onBlur",
         resolver: yupResolver(registerSchema)
     })
 
     function submit(data){
         data.id = uuid()
         newTransaction(data)
+        reset()
     }
 
     return(

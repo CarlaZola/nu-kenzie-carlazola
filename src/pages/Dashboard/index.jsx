@@ -1,11 +1,50 @@
-import  Form  from "../../components/Form"
+import Form from "../../components/Form"
+import Header from "../../components/Header"
+import NavBarCategories from "../../components/NavBar"
+import TotalMoney from "../../components/TotalMoney"
+import { useEffect, useState } from "react"
+import { FaMoon } from "react-icons/Fa"
+import { FaSun } from "react-icons/Fa"
+import { ThemeProvider } from 'styled-components'
+import {themeLigth, themeDark } from "../../styles/theme.js"
+import StyledDashboard from "./dashboard.js"
 
-function Dashboard({newTransaction}){
+function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue}){
+
+    const [theme, setTheme] = useState(true)
+
+    function getTheme(){
+        return JSON.parse((localStorage.getItem("@favoriteTheme"))) || []
+    }
+
+    useEffect(() => {
+        localStorage.setItem("@favoriteTheme", JSON.stringify(theme ? themeLigth : themeDark))
+    }, [theme])
+
     return(
-        <>
-            <h1>Teste</h1>
-            <Form newTransaction={newTransaction}/>
-        </>
+      <ThemeProvider theme={theme ? themeLigth : themeDark }>
+          <StyledDashboard>
+            <Header/>
+                {
+                    theme ? (
+                        <FaMoon onClick={() => setTheme(false)}/>
+                    ):(
+                        <FaSun onClick={() => setTheme(true)}/>
+                    )
+                }
+            <Form 
+            newTransaction={newTransaction}/>
+
+            <TotalMoney
+            totalValue={totalValue}
+            />
+
+            <NavBarCategories 
+            typeOfEntries={typeOfEntries}
+            setFilteredTransactions={setFilteredTransactions}
+            />
+        </StyledDashboard>
+      </ThemeProvider>
     )
 }
 

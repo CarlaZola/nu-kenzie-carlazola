@@ -1,27 +1,51 @@
 import { createGlobalStyle } from "styled-components"
 
 const Global = createGlobalStyle`
-    :root{
-        --color-primary: #FD377E;
-        --color-primary-2: #E34981;
-        --color-secundary: #03B898;
+
+    :root{    
         
-        --color-grey-4: #212529;
-        --color-grey-3: ##868E96;
-        --color-grey-2: ###E9ECEF;
-        --color-grey-1: #F8F9FA;
+        --colorPrimary: #FD377E;
+        --colorPrimary2: #E34981;
+        --colorSecundary: #03B898;
 
+        --colorGrey1: #212529;
+        --colorGrey2: #868E96;
+        --colorGrey3: #E9ECEF;
+        --colorGrey4: #F8F9FA;
+
+        --title1: 2.375rem; 
+        --title2: 1.75rem;
+        --title3: 1.375rem;
+        --fontDefault: 1rem;
+        --font1: 0.875rem;
+        --font2: 0.75rem;
     }
+    
 
-    body{
+    body, main, h1, h2, h3, h4, aside, section, p, a, ul, li, span, header, nav, div{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        list-style: none;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    body{
+        height: 100vh;
+    }
+
+    a{
         text-decoration: none;
     }
 
-`
+    li{
+        list-style: none;
+        color: var(--color-grey-4);
+    }
 
+    p{
+        color: var(--color-grey-4);
+    }
+
+`
 
 export default Global
