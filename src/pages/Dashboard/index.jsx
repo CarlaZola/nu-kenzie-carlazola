@@ -14,9 +14,9 @@ function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFiltered
             <Header/>
                 {
                     theme ? (
-                        <FaMoon onClick={() => setTheme(false)}/>
+                       <FaSun onClick={() => setTheme(false)}/>
                     ):(
-                        <FaSun onClick={() => setTheme(true)}/>
+                        <FaMoon onClick={() => setTheme(true)}/>
                     )
                 }
             <Form 

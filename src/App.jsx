@@ -6,16 +6,7 @@ import { themeLigth, themeDark } from "./styles/theme";
 
 function App() {
 
-  const [theme, setTheme] = useState(true)
-
-  function getTheme(){
-    return JSON.parse((localStorage.getItem("@favoriteTheme"))) || []
-  }
-
-  useEffect(() => {
-      localStorage.setItem("@favoriteTheme", JSON.stringify(theme))
-  }, [theme])
-
+  const [theme, setTheme] = useState(false)
 
   const typeOfEntries = [
     {
@@ -46,7 +37,7 @@ function App() {
   return (
       <>       
           <Global/>
-          <ThemeProvider theme={theme ? themeLigth : themeDark}>
+          <ThemeProvider theme={theme ? themeDark : themeLigth}>
             <RoutesMain 
             newTransaction={newTransaction} 
             listTransaction={listTransaction}  
