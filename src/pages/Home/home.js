@@ -64,6 +64,8 @@ const MainHome = styled.main`
 
         .content{
             width: 40%;
+            height: 50%;
+            gap: 2rem;
         }
 
         div{
@@ -77,31 +79,6 @@ const MainHome = styled.main`
         .img{
             width: 40%;
             height: unset;
-        }
-
-        .img > img{
-            animation: animationLogo 4s linear infinite;
-        }
-
-        @keyframes animationLogo{
-            0%{
-                transform: scale(1);
-            }
-            20%{
-                transform: scale(1.1);
-            }
-            40%{
-                transform: scale(1.15);
-            }
-            60%{
-                transform: scale(1.1);
-            }
-            80%{
-                transform: scale(1);
-            }
-            100%{
-                transform: scale(1);
-            }
         }
 
     }
