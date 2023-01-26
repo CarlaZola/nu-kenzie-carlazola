@@ -3,8 +3,7 @@ import Header from "../../components/Header";
 import NavBarCategories from "../../components/NavBar";
 import TotalMoney from "../../components/TotalMoney";
 import { useEffect, useState } from "react";
-import { FaMoon } from "react-icons/fa";
-import { FaSun } from "react-icons/fa";
+import  {FaMoon , FaSun}  from "react-icons/fa";
 import StyledDashboard from "./dashboard";
 
 function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue, theme, setTheme}){
@@ -14,7 +13,7 @@ function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFiltered
             <Header/>
                 {
                     theme ? (
-                       <FaSun onClick={() => setTheme(false)}/>
+                        <FaSun onClick={() => setTheme(false)}/>
                     ):(
                         <FaMoon onClick={() => setTheme(true)}/>
                     )
