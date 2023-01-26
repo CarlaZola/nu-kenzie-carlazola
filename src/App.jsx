@@ -27,7 +27,13 @@ function App() {
    
   ]
 
-  const [listTransaction, setListTransaction] = useState([])
+  const transactionHistory = JSON.parse(localStorage.getItem("@transactionHistoric"))
+
+  const [listTransaction, setListTransaction] = useState(transactionHistory ? transactionHistory : [])
+
+  useEffect(() => {
+      localStorage.setItem("@transactionHistoric", JSON.stringify(listTransaction))
+  }, [listTransaction])
 
   const [filteredTransactions, setFilteredTransactions] = useState("Todos")
 
@@ -41,6 +47,8 @@ function App() {
   .map((transaction) => transaction.type == "entrada" ? transaction.value : -(transaction.value))
   .reduce((acummulator, currentValue) =>  acummulator + currentValue, 0)
     
+  
+
   return (
       <>       
           <Global/>
@@ -53,9 +61,9 @@ function App() {
             totalValue={totalValue}
             theme={theme}
             setTheme={setTheme}
+            filterByTransactionType={filterByTransactionType}
             />       
           </ThemeProvider>
-          
       </>
   )
 }

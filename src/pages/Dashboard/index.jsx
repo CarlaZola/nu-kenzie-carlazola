@@ -3,33 +3,28 @@ import Header from "../../components/Header";
 import NavBarCategories from "../../components/NavBar";
 import TotalMoney from "../../components/TotalMoney";
 import { useEffect, useState } from "react";
-import  {FaMoon , FaSun}  from "react-icons/fa";
 import StyledDashboard from "./dashboard";
+import ListTransaction from "../../components/ListTransaction";
 
-function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue, theme, setTheme}){
+function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue, theme, setTheme, filterByTransactionType}){
     
     return(
-          <StyledDashboard>
-            <Header/>
-                {
-                    
-                    theme == "ligth" ? (
-                       <FaMoon onClick={() => setTheme("dark")}/> 
-                    ):(
-                       <FaSun onClick={() => setTheme("ligth")}/> 
-                    )
-                    
-                }
+        <StyledDashboard>
+            <Header
+            theme={theme}
+            setTheme={setTheme}
+            />
             <Form 
             newTransaction={newTransaction}/>
-
             <TotalMoney
             totalValue={totalValue}
             />
-
             <NavBarCategories 
             typeOfEntries={typeOfEntries}
             setFilteredTransactions={setFilteredTransactions}
+            />
+            <ListTransaction 
+            filterByTransactionType={filterByTransactionType}                           
             />
         </StyledDashboard>
     )
