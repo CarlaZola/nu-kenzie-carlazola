@@ -3,7 +3,7 @@ import Home from "../pages/Home"
 import Dashboard from "../pages/Dashboard"
 
 
-function RoutesMain({newTransaction, listTransaction, typeOfEntries, setFilteredTransactions, totalValue}){
+function RoutesMain({newTransaction, listTransaction, typeOfEntries, setFilteredTransactions, totalValue, theme, setTheme}){
 
     return(
         <Routes>
@@ -16,6 +16,8 @@ function RoutesMain({newTransaction, listTransaction, typeOfEntries, setFiltered
             typeOfEntries={typeOfEntries}
             setFilteredTransactions={setFilteredTransactions}
             totalValue={totalValue}
+            theme={theme}
+            setTheme={setTheme}
             />          
             }/>
         </Routes>

@@ -1,9 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import RoutesMain from './routes'
 import Global from './styles/global'
-
+import { ThemeProvider } from 'styled-components';
+import {themeLigth, themeDark } from "./styles/theme";
 
 function App() {
+
+  const [theme, setTheme] = useState(true)
+
+  function getTheme(){
+    return JSON.parse((localStorage.getItem("@favoriteTheme"))) || []
+  }
+
+  useEffect(() => {
+      localStorage.setItem("@favoriteTheme", JSON.stringify(theme ? themeLigth : themeDark))
+  }, [theme])
+
 
   const typeOfEntries = [
     {
@@ -34,13 +46,18 @@ function App() {
   return (
       <>       
           <Global/>
-          <RoutesMain 
-          newTransaction={newTransaction} 
-          listTransaction={listTransaction}  
-          typeOfEntries={typeOfEntries}
-          setFilteredTransactions={setFilteredTransactions}
-          totalValue={totalValue}
-          />       
+          <ThemeProvider theme={theme ? themeLigth : themeDark}>
+            <RoutesMain 
+            newTransaction={newTransaction} 
+            listTransaction={listTransaction}  
+            typeOfEntries={typeOfEntries}
+            setFilteredTransactions={setFilteredTransactions}
+            totalValue={totalValue}
+            theme={theme}
+            setTheme={setTheme}
+            />       
+          </ThemeProvider>
+          
       </>
   )
 }
