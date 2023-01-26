@@ -1,4 +1,4 @@
-import HeaderDash from "./header.js"
+import HeaderDash from "./header"
 import { Link } from "react-router-dom"
 
 function Header(){

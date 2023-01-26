@@ -1,13 +1,13 @@
-import Form from "../../components/Form"
-import Header from "../../components/Header"
-import NavBarCategories from "../../components/NavBar"
-import TotalMoney from "../../components/TotalMoney"
-import { useEffect, useState } from "react"
-import { FaMoon } from "react-icons/Fa"
-import { FaSun } from "react-icons/Fa"
-import { ThemeProvider } from 'styled-components'
-import {themeLigth, themeDark } from "../../styles/theme.js"
-import StyledDashboard from "./dashboard.js"
+import Form from "../../components/Form";
+import Header from "../../components/Header";
+import NavBarCategories from "../../components/NavBar";
+import TotalMoney from "../../components/TotalMoney";
+import { useEffect, useState } from "react";
+import { FaMoon } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
+import { ThemeProvider } from 'styled-components';
+import {themeLigth, themeDark } from "../../styles/theme.js";
+import StyledDashboard from "./dashboard";
 
 function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue}){
 

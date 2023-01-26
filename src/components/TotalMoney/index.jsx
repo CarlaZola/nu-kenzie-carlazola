@@ -1,4 +1,4 @@
-import CardTotalMoney from "./totalMoney.js";
+import CardTotalMoney from "./totalMoney";
 
 function TotalMoney({totalValue}){
 
