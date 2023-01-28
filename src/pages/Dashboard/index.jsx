@@ -14,24 +14,32 @@ function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFiltered
             theme={theme}
             setTheme={setTheme}
             />
-
-            <Form 
-            newTransaction={newTransaction}
-            />
-
-            <TotalMoney
-            totalValue={totalValue}
-            />        
-
-            <NavBarCategories 
-            typeOfEntries={typeOfEntries}
-            setFilteredTransactions={setFilteredTransactions}
-            />
+        <div className="container">
             
-            <ListTransaction 
-            filterByTransactionType={filterByTransactionType}    
-            removeTransaction={removeTransaction}                       
-            />
+             <div className="box_left">
+                <Form 
+                newTransaction={newTransaction}
+                />
+
+                <TotalMoney
+                totalValue={totalValue}
+                />        
+            </div>
+
+           
+            <div className="box_rigth">
+                <NavBarCategories 
+                typeOfEntries={typeOfEntries}
+                setFilteredTransactions={setFilteredTransactions}
+                />
+
+                <ListTransaction 
+                filterByTransactionType={filterByTransactionType}    
+                removeTransaction={removeTransaction}                       
+                 />
+            </div>
+            
+        </div>
         </StyledDashboard>
     )
 }

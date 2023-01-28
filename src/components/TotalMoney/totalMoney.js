@@ -25,6 +25,11 @@ const CardTotalMoney = styled.section`
         color: var(--colorPrimary);
         font-weight: 800;
     }
+
+    @media(min-width: 768px){
+        width: 87%;
+    }
+
 `
 
 export default CardTotalMoney

@@ -33,6 +33,7 @@ const Global = createGlobalStyle`
     body{
         min-height: 100vh;
         min-width: 100%;
+        overflow-x: hidden;
     }
 
     a{

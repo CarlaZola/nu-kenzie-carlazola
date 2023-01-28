@@ -10,6 +10,7 @@ const HeaderDash = styled.header`
     padding: 0 1.125rem;
     box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
     margin-bottom: 1.25rem;
+    background-color: ${({theme}) => theme.colors.colorGrey4};
 
     .navBar_Header{
         display: flex;
@@ -25,9 +26,9 @@ const HeaderDash = styled.header`
         cursor: pointer;
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 1024px){
         height: 5rem;
-        padding: 0 2rem;
+        padding: 0 2.75rem;
     }
 `
 

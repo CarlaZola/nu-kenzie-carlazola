@@ -7,6 +7,7 @@ const SectionNav = styled.section`
     flex-direction: column;
     align-items: center;
     gap: .5rem;
+  
 
     h2{
         font-size: var(--fontDefault);
@@ -26,6 +27,19 @@ const SectionNav = styled.section`
         border: 1px solid transparent;
         color : var(--colorGrey1);
         font-weight: 600;
+        cursor: pointer;
+    }
+
+    li:hover{
+        background-color: var(--colorPrimary);
+        color : var(--colorGrey4);
+    }
+
+    @media(min-width: 1024px){
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 1rem;
+        gap: 3.5rem;
     }
 
 `

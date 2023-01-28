@@ -63,6 +63,21 @@ const TransactionCard = styled.li`
         width: .625rem;
         height: .625rem;
     }
+
+    @media(min-width: 768px){
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+
+        .content_value{
+        display:flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+        }
+    }
+
+   
 `
 
 export default TransactionCard

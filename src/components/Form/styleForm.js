@@ -7,13 +7,12 @@ const SectionForm = styled.section`
     align-items: center;
     margin: 0 auto  1.5rem;
     border: 1px solid ${({theme}) => theme.colors.colorGrey2};
-    border-radius: .25rem;
+    border-radius: .25rem;   
    
     form,  .content_inputDescription, .input_value, .input_typeValue{
         display: flex;
         flex-direction: column;
-        gap: .25rem;  
-        
+        gap: .25rem;          
     }
 
     .content_inputDescription, .input_value, .input_typeValue{
@@ -35,7 +34,6 @@ const SectionForm = styled.section`
     label{
         font-size: var(--font2);
         color: ${({theme}) => theme.colors.colorGrey1};
-
     }
 
     input:focus{
@@ -44,8 +42,7 @@ const SectionForm = styled.section`
 
     input{
         padding: .0187rem .25rem;
-        height: 1.8125rem;
-       
+        height: 1.8125rem;       
     }
 
     select{
@@ -70,6 +67,10 @@ const SectionForm = styled.section`
     p{
         font-size: var(--font3);
         color: ${({theme}) => theme.colors.colorMessageError}
+    } 
+
+    @media(min-width: 768px){
+        width: 87%;
     }
 
 `

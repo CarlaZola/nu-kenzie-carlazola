@@ -17,6 +17,10 @@ const StyleListTransaction = styled.section`
         
     }
 
+    @media(min-width: 1024px){
+        width: 90%;     
+    }
+
 `
 
 export default StyleListTransaction
