@@ -19,6 +19,7 @@ const Global = createGlobalStyle`
         --fontDefault: 1rem;
         --font1: 0.875rem;
         --font2: 0.75rem;
+        --font3: .625rem;
     }
     
 

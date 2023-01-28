@@ -9,7 +9,7 @@ function CardTransaction({transaction}){
 
             <p>{transaction.description}</p>
 
-            <p>{transaction.value}</p>
+            <p>{transaction.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
 
             <p>{transaction.type === "saida" ? "Saída" : "Entrada"}</p>
 

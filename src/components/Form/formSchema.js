@@ -12,5 +12,5 @@ export const registerSchema = yup.object().shape({
     .required("Você deve inserir um valor mínimo para registro"),
     type: yup
     .string()
-    .required("Obrigatório selecionar se o valor é entrada ou saída")     
+    .required("Selecione o tipo")     
 })

@@ -1,17 +1,19 @@
 import  {FaMoon , FaSun}  from "react-icons/fa";
+import DivTheme from "./styleTheme"
 
 function ModeTheme({theme, setTheme}){
 
     return (
-        <div>
+        <DivTheme>
+        
             {                    
             theme == "ligth" ? (
                 <FaMoon onClick={() => setTheme("dark")}/> 
             ):(
-                <FaSun onClick={() => setTheme("ligth")}/> 
+                <FaSun color="var(--colorGrey4)" onClick={() => setTheme("ligth")}/> 
             )                        
             }
-        </div>
+        </DivTheme>
     )
 }
 

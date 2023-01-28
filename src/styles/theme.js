@@ -9,6 +9,8 @@ export const themeLigth = {
         colorGrey2: "#868E96",
         colorGrey3: "#E9ECEF",
         colorGrey4: "#F8F9FA",
+
+        colorMessageError: "#FF0000",
     },
 }
 
@@ -22,5 +24,7 @@ export const themeDark = {
         colorGrey2: "#E9ECEF",
         colorGrey3: "#868E96",
         colorGrey4: "#212529",
+
+        colorMessageError: "#F8F9FA",
     },
 }

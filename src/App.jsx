@@ -47,8 +47,6 @@ function App() {
   .map((transaction) => transaction.type == "entrada" ? transaction.value : -(transaction.value))
   .reduce((acummulator, currentValue) =>  acummulator + currentValue, 0)
     
-  
-
   return (
       <>       
           <Global/>
