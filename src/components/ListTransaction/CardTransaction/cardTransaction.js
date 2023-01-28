@@ -77,6 +77,9 @@ const TransactionCard = styled.li`
         gap: 3rem;
         }
 
+        .description{
+            font-size: 1.25rem;
+        }
         .value{
         font-size: var(--fontDefault);
         font-weight: 600;
