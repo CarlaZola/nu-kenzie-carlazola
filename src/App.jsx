@@ -46,6 +46,11 @@ function App() {
   const totalValue = filterByTransactionType
   .map((transaction) => transaction.type == "entrada" ? transaction.value : -(transaction.value))
   .reduce((acummulator, currentValue) =>  acummulator + currentValue, 0)
+
+  function removeTransaction(removeItem){
+    const newTransactions = listTransaction.filter((transaction) => transaction.id !== removeItem)
+    setListTransaction(newTransactions)
+  }
     
   return (
       <>       
@@ -60,6 +65,7 @@ function App() {
             theme={theme}
             setTheme={setTheme}
             filterByTransactionType={filterByTransactionType}
+            removeTransaction={removeTransaction}
             />       
           </ThemeProvider>
       </>

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import StyledDashboard from "./dashboard";
 import ListTransaction from "../../components/ListTransaction";
 
-function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue, theme, setTheme, filterByTransactionType}){
+function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFilteredTransactions, totalValue, theme, setTheme, filterByTransactionType, removeTransaction}){
     
     return(
         <StyledDashboard>
@@ -24,7 +24,8 @@ function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFiltered
             setFilteredTransactions={setFilteredTransactions}
             />
             <ListTransaction 
-            filterByTransactionType={filterByTransactionType}                           
+            filterByTransactionType={filterByTransactionType}    
+            removeTransaction={removeTransaction}                       
             />
         </StyledDashboard>
     )

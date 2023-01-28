@@ -10,7 +10,7 @@ const CardTotalMoney = styled.section`
     padding: 1rem 1.25rem;
     height: 5rem;
     border-radius: .25rem;
-    border: 1px solid var(--colorGrey2);
+    border: 1.5px solid var(--colorGrey2);
 
     h2{
         color: ${({theme}) => theme.colors.colorGrey1};

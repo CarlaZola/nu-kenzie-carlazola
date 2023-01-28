@@ -5,7 +5,7 @@ export const registerSchema = yup.object().shape({
     .string()
     .required("A descrição é obrigatória")
     .min(3, "A descrição deve conter no mínimo 3 caracteres")
-    .max(100, "A descrição deve conter no máximo 100 caracteres"),
+    .max(30, "A descrição deve conter no máximo 30 caracteres"),
     value: yup
     .number()
     .positive("Inserir apenas valores maior que zero")

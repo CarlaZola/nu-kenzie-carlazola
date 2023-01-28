@@ -1,20 +1,29 @@
 import { FaTrash } from "react-icons/fa";
+import TransactionCard from "./cardTransaction";
 
 
-function CardTransaction({transaction}){
+function CardTransaction({transaction, removeTransaction}){
 
     return(
-        <li>
-            <div className="colorFOrTypeEntries"></div>
+        <TransactionCard>
+            <div
+            className={transaction.type === "saida" ? ("colorForTypeEntries colorGreyExit") : ("colorForTypeEntries colorGreenEntrie" )
+            }
 
-            <p>{transaction.description}</p>
+            ></div>
 
-            <p>{transaction.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
+           <div className="content_description">
+                <p className="description">{transaction.description}</p>
 
-            <p>{transaction.type === "saida" ? "Saída" : "Entrada"}</p>
+                <p className="type">{transaction.type === "saida" ? "Saída" : "Entrada"}</p>
+           </div>
 
-            <FaTrash/>
-        </li>
+           <div className="content_value">
+                <p className="value">{transaction.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
+
+                <FaTrash className="trash" onClick={() => removeTransaction(transaction.id)}/>
+           </div>
+        </TransactionCard>
     )
 }
 

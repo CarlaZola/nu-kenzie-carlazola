@@ -1,18 +1,31 @@
-import CardTransaction from "./CardTransaction"
+import CardTransaction from "./CardTransaction";
+import StyleListTransaction from "./listTransactionStyle";
 
+function ListTransaction({filterByTransactionType, removeTransaction}){
 
-function ListTransaction({filterByTransactionType}){
+    
 
     return(
-        <>
-            <ul>
-                {
-                    filterByTransactionType.map((transaction) => {
-                        return <CardTransaction key={transaction.id} transaction={transaction}/>
-                    })
-                }
-            </ul>
-        </>
+        <StyleListTransaction>
+            {
+
+                filterByTransactionType <=0 ? (
+
+                    <h2>Você ainda não possuí nenhum lançamento</h2>
+                    
+                ) : (
+                    <ul>
+                        {
+                            filterByTransactionType.map((transaction) => {
+                                return <CardTransaction key={transaction.id} transaction={transaction} removeTransaction={removeTransaction}/>
+                            })
+                        }
+                    </ul>   
+                )
+            }
+
+            
+        </StyleListTransaction>
     )
 }
 

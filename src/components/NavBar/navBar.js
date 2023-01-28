@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SectionNav = styled.section`
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,8 @@ const SectionNav = styled.section`
         background-color: var(--colorGrey3);
         border-radius: .25rem;
         border: 1px solid transparent;
+        color : var(--colorGrey1);
+        font-weight: 600;
     }
 
 `
