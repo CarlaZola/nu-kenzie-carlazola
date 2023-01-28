@@ -17,7 +17,7 @@ const TransactionCard = styled.li`
         top: 0;
         left: 0;
         height: 156px;
-        width: .25rem;
+        width: .375rem;
         background-color: var(--colorSecundary);
         border-radius: .25rem 0 0 .25rem;
 
