@@ -14,15 +14,20 @@ function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFiltered
             theme={theme}
             setTheme={setTheme}
             />
+
             <Form 
-            newTransaction={newTransaction}/>
+            newTransaction={newTransaction}
+            />
+
             <TotalMoney
             totalValue={totalValue}
-            />
+            />        
+
             <NavBarCategories 
             typeOfEntries={typeOfEntries}
             setFilteredTransactions={setFilteredTransactions}
             />
+            
             <ListTransaction 
             filterByTransactionType={filterByTransactionType}    
             removeTransaction={removeTransaction}                       
