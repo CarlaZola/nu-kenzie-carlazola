@@ -27,6 +27,7 @@ function Form({newTransaction}){
                     type="text" 
                     {...register("description")}
                     id="description"
+                    placeholder="Digite aqui sua descrição"
                     />
                     {errors.description?.message && <p>{errors.description.message}</p>}
                 </div>
@@ -38,6 +39,7 @@ function Form({newTransaction}){
                         type="number"
                         {...register("value")}
                         id="value"
+                        placeholder="R$"
                         />
                         {errors.value?.message && <p>Inserir números maiores que zero</p>}
                     </div>

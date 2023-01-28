@@ -1,8 +1,9 @@
+import SectionNav from "./navBar"
 
 
 function NavBarCategories({typeOfEntries, setFilteredTransactions}){
     return(
-        <>
+        <SectionNav>
             <h2>Resumo financeiro</h2>
 
             <ul>
@@ -11,7 +12,7 @@ function NavBarCategories({typeOfEntries, setFilteredTransactions}){
                     typeOfEntries.map((entrie) => ( <li key={entrie.name} onClick={() => setFilteredTransactions(entrie.value)}>{entrie.name}</li> ))
                 }
             </ul>
-        </>
+        </SectionNav>
     )
 }
 
