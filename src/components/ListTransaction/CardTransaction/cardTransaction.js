@@ -9,6 +9,7 @@ const TransactionCard = styled.li`
     display: flex;
     flex-direction: column;
     gap: .625rem;
+    animation: card 1.5s linear;
 
 
     .colorForTypeEntries{
@@ -77,6 +78,20 @@ const TransactionCard = styled.li`
         }
     }
 
+    @keyframes card {
+    0%{
+        opacity: 0;  
+    }
+    25%{
+        opacity: 0.5
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
    
 `
 
