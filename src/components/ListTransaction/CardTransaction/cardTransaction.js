@@ -76,6 +76,11 @@ const TransactionCard = styled.li`
         align-items: flex-start;
         gap: 3rem;
         }
+
+        .value{
+        font-size: var(--fontDefault);
+        font-weight: 600;
+    }
     }
 
     @keyframes card {
