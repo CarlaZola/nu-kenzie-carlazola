@@ -10,7 +10,7 @@ const SectionNav = styled.section`
   
 
     h2{
-        font-size: var(--fontDefault);
+        font-size: var(--title3);
         color: ${({theme}) => theme.colors.colorGrey1};
         text-align: center;
     }
