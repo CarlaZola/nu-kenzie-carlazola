@@ -3,8 +3,10 @@ import  uuid from "react-uuid"
 import { registerSchema } from "./formSchema.js"
 import { yupResolver } from "@hookform/resolvers/yup"
 import SectionForm from "./styleForm"
+import Input from "./Inputs/index.jsx"
+import Select from "./Select/index.jsx"
 
-function Form({newTransaction}){
+function Form({newTransaction,  typeOfEntries}){
 
     const { register, handleSubmit, formState: { errors }, reset} = useForm({
         mode: "onBlur",
@@ -12,6 +14,7 @@ function Form({newTransaction}){
     })
 
     function submit(data){
+        console.log(data)
         data.id = uuid()
         newTransaction(data)
         reset()
@@ -22,34 +25,19 @@ function Form({newTransaction}){
             <form onSubmit={handleSubmit(submit)} noValidate>
 
                 <div className="content_inputDescription">
-                    <label htmlFor="description">Descrição</label>
-                    <input 
-                    type="text" 
-                    {...register("description")}
-                    id="description"
-                    placeholder="Digite aqui sua descrição"
-                    />
+                    <Input type="text" placeholder="Digite sua descrição aqui..." label="Descrição" id="description" register={register("description")}/>
                     {errors.description?.message && <p>{errors.description.message}</p>}
                 </div>
                 
                 <div className="boxContent_Values">
                     <div className="input_value">
-                        <label htmlFor="value">Valor</label>
-                        <input 
-                        type="number"
-                        {...register("value")}
-                        id="value"
-                        placeholder="R$"
-                        />
+                        <Input type="number" placeholder="Insira o valor aqui..." label="Valor" id="value" register={register("value")}/>
                         {errors.value?.message && <p>Inserir números maiores que zero</p>}
                     </div>
                     <div className="input_typeValue">                       
-                        <label htmlFor="typeValue">Tipo de valor</label>
-                        <select id="typeValue"  {...register("type")}>
-                            <option value="">Selecione</option>
-                            <option value="saida">Saída</option>
-                            <option value="entrada">Entrada</option>
-                        </select>
+                        <Select id="typeValue" label="Tipo de valor" register={register("type")} typeOfEntries={typeOfEntries}>
+                           
+                        </Select>
                         {errors.type?.message && <p>{errors.type.message}</p>}
                     </div>                   
                 </div>

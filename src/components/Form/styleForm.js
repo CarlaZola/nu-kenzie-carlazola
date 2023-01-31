@@ -31,30 +31,6 @@ const SectionForm = styled.section`
         align-items: center;
     }
 
-    label{
-        font-size: var(--font2);
-        color: ${({theme}) => theme.colors.colorGrey1};
-    }
-
-    input:focus{
-        outline: ${({theme}) => theme.colors.colorGrey3};
-    }
-
-    input{
-        padding: .0187rem .25rem;
-        height: 1.8125rem;       
-    }
-
-    select{
-        height: 2.125rem;
-    }   
-
-    input, select{
-        border-radius: .25rem;
-        border: 1px solid var(--colorGrey2);
-        background-color: var(--colorGrey3);
-    }
-
     button{
         background-color: var(--colorPrimary);
         border: 1px solid var(--colorPrimary);

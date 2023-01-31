@@ -19,6 +19,7 @@ function Dashboard({newTransaction, listTransaction, typeOfEntries,  setFiltered
              <div className="box_left">
                 <Form 
                 newTransaction={newTransaction}
+                typeOfEntries={typeOfEntries}
                 />
 
                 <TotalMoney
